@@ -5,7 +5,7 @@ Shows similar images based on input image.
 
 Improved CBIR process is implemented in Matlab.
 
-# Dataset
+## Dataset
 Corel-10k dataset  contains 100 categories, and there are 10,000 images from diverse contents such as sunset, beach, flower, building, car, horses, mountains, fish, food, door, etc. Each category contains 100 images of size 192×128 or 128×192 in the JPEG format.  Corel-5K dataset consists of the first 5000 images, and Corel-10K dataset consists of the 10,000 images.
  
 COREL 10k image database download page - http://www.ci.gxnu.edu.cn/cbir/Dataset.aspx Copy the first 5000 images and paste it to a new folder, it will become your COREL 5k dataset.
@@ -14,13 +14,13 @@ WANG (1k) image dataset download - http://wang.ist.psu.edu/~jwang/test1.tar
 
 name the dataset folder as corel10k , corel5k , wang.
 
-# STEP-1 (running the project) 
+## STEP-1 (running the project) 
    1. Download all the codes and dataset into the MATLAB directory.
-   2. copy any image from the given dataset and paste it in matlab directory as query.jpg
-   3. Run the projectmain.m file and give the input what it asks.
+   2. copy any image from the given dataset and paste it in matlab directory as query.jpg.
+   3. **`Run projectmain.m`**
    4. Wait for 1-2 minute and you will get the related images to your search images.
 
-# STEP -2 (explanation of code)
+## STEP -2 (explanation of code)
 
 projectmain.m -  It is the main file, it calls all the functions. This file calculates the mean of all images and segregates them accordingly
                  on basis of mean and sd value of query image. Selected images and their corresponding gray images are stored in new folders named as 
@@ -43,4 +43,4 @@ edgefeature.m -  This function calculates histogram(r,g,b channels) of all the e
 similarity.m  -  This function normalizes the two arrays obtained from edgefeature and lbpfeature function and adds them. Result is stored in new array.
                  Now the array is sorted and images corresponding to first 10-20 values are shown.
 
-natsort.m     -  used to sort file name of images
+natsort.m     -  used to sort file name of images.
